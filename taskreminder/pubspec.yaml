@@ -1,0 +1,46 @@
+name: taskreminder
+description: Bilingual (Hindi/English) task reminder app with voice reminders that bypass silent mode.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # Local persistence
+  sqflite: ^2.3.3
+  path: ^1.9.0
+
+  # Local notifications (visible reminder + fallback trigger on iOS)
+  flutter_local_notifications: ^17.2.2
+  timezone: ^0.9.4
+
+  # Text-to-speech (used on iOS foreground path and as Dart-side fallback on Android)
+  flutter_tts: ^4.0.2
+
+  # HTTP client for optional backend sync
+  http: ^1.2.2
+
+  # State management
+  provider: ^6.1.2
+
+  # Date/time picking
+  intl: ^0.19.0
+
+  # Unique IDs
+  uuid: ^4.4.2
+
+  # Permission handling (exact alarms, notifications)
+  permission_handler: ^11.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
